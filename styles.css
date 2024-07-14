@@ -1,4 +1,4 @@
-/* Reset default styles */
+/* Ensure reset of default styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,8 +11,8 @@ body {
     line-height: 1.6;
     background-color: #f5f5f5;
     color: #333;
-    min-height: 100vh; /* Ensure the body covers the full viewport height */
-    position: relative; /* Make the body a reference for absolute positioning */
+    min-height: 100vh;
+    position: relative;
 }
 
 .container {
@@ -69,26 +69,71 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-.carousel {
+.carousel-background {
     position: relative;
     width: 100%;
-    max-width: 100%;
+    height: 60vh;
     overflow: hidden;
-    margin-bottom: 20px;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .slides {
     display: flex;
+    width: 300%;
+    height: 100%;
 }
 
 .slide {
-    flex: 0 0 100%;
+    flex: 0 0 33.33%;
+    transition: transform 0.5s ease;
+    position: relative;
 }
 
 .slide img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.carousel-overlay .container {
+    padding: 20px;
+}
+
+.carousel-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carousel-overlay p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+main {
+    position: relative;
+    z-index: 1;
 }
 
 section {
@@ -110,6 +155,8 @@ section h2 {
     text-align: left;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: block;
+    color: #333;
 }
 
 .trek:hover {
