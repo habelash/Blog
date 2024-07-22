@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>free Command - Unix Commands</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Unix Commands</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Back to Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-5">
+        <section>
+            <div class="card">
+                <h5 class="card-header">free Command</h5>
+                <div class="card-body">
+                    <p class="card-text">The <code>free</code> command in Unix/Linux displays the amount of free and used memory in the system, including physical and swap memory.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Syntax</h5>
+                <div class="card-body">
+                    <pre><code>free [options]</code></pre>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Description</h5>
+                <div class="card-body">
+                    <p>The <code>free</code> command shows the total amount of free and used physical and swap memory in the system, as well as the buffers used by the kernel.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Options</h5>
+                <div class="card-body">
+                    <p>The <code>free</code> command typically does not have many options. Commonly used options include:</p>
+                    <ul>
+                        <li><code>-h</code>: Display memory sizes in human-readable format (e.g., MB, GB).</li>
+                        <li><code>-s <em>seconds</em></code>: Update statistics every <em>seconds</em>.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Examples</h5>
+                <div class="card-body">
+                    <pre><code>free</code></pre>
+                    <p>This command displays memory usage statistics.</p>
+                    <pre><code>free -h</code></pre>
+                    <p>This command displays memory sizes in a human-readable format.</p>
+                    <pre><code>free -s 5</code></pre>
+                    <p>This command updates memory statistics every 5 seconds.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Habelash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

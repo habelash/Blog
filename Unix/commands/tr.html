@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tr Command - Unix Commands</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Unix Commands</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Back to Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-5">
+        <section>
+            <div class="card">
+                <h5 class="card-header">tr Command</h5>
+                <div class="card-body">
+                    <p class="card-text">The <code>tr</code> command in Unix/Linux translates or deletes characters. It reads characters from standard input, performs specified translations, and writes the result to standard output.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Syntax</h5>
+                <div class="card-body">
+                    <pre><code>tr [options] set1 set2</code></pre>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Description</h5>
+                <div class="card-body">
+                    <p>The <code>tr</code> command translates characters from <code>set1</code> to <code>set2</code> according to specified rules. It can also delete characters specified in <code>set1</code>.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Options</h5>
+                <div class="card-body">
+                    <ul>
+                        <li><code>-d</code>: Delete characters in <code>set1</code> from the input.</li>
+                        <li><code>-c</code>: Complement <code>set1</code>; replace characters not in <code>set1</code>.</li>
+                        <li><code>-s</code>: Squeeze multiple occurrences of characters in <code>set2</code> to a single character.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Examples</h5>
+                <div class="card-body">
+                    <pre><code>echo "hello" | tr '[:lower:]' '[:upper:]'</code></pre>
+                    <p>This command converts lowercase letters in "hello" to uppercase.</p>
+                    <pre><code>echo "abc123xyz789" | tr -d '[:digit:]'</code></pre>
+                    <p>This command removes digits from the input string "abc123xyz789".</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Habelash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

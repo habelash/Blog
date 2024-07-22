@@ -212,6 +212,14 @@ section h2 {
 .trek .details strong {
     color: #555;
 }
+.trek-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Ensures text color remains as defined */
+}
+
+.trek-link:hover {
+    text-decoration: none; /* Remove underline on hover as well */
+}
 
 
 footer {

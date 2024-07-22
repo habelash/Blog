@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>awk Command - Unix Commands</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Unix Commands</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Back to Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-5">
+        <section>
+            <div class="card">
+                <h5 class="card-header">awk Command</h5>
+                <div class="card-body">
+                    <p class="card-text">The <code>awk</code> command in Unix/Linux processes and analyzes text files line by line. It is a powerful programming language primarily used for pattern scanning and text processing.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Syntax</h5>
+                <div class="card-body">
+                    <pre><code>awk '[pattern] {action}' [file(s)]</code></pre>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Description</h5>
+                <div class="card-body">
+                    <p>The <code>awk</code> command executes a series of actions for each line of input that matches a specified pattern. It processes text files, extracting data, transforming content, and generating formatted reports.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Examples</h5>
+                <div class="card-body">
+                    <pre><code>awk '{ print $1 }' file.txt</code></pre>
+                    <p>This command prints the first column of data from <code>file.txt</code>.</p>
+                    <pre><code>awk -F',' '{ print $2 }' data.csv</code></pre>
+                    <p>This command prints the second field (column) of data from <code>data.csv</code>, using comma as the field separator.</p>
+                    <pre><code>awk '/pattern/ { print $0 }' file.txt</code></pre>
+                    <p>This command prints lines from <code>file.txt</code> that contain the specified pattern.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Habelash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
