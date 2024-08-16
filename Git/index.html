@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Git: A Comprehensive Guide to Essential Commands</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <header class="mb-4">
+            <h1 class="display-4 text-center">Mastering Git: A Comprehensive Guide to Essential Commands</h1>
+            <p class="lead text-center">Learn how to efficiently manage your code with Git using this comprehensive guide to essential commands.</p>
+        </header>
+
+        <nav class="mb-4">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link active" href="#getting-started">Getting Started with Git</a></li>
+                <li class="nav-item"><a class="nav-link" href="#basic-commands">Basic Git Commands</a></li>
+                <li class="nav-item"><a class="nav-link" href="#branching-merging">Branching and Merging</a></li>
+                <li class="nav-item"><a class="nav-link" href="#staging-committing">Staging and Committing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#remote-repositories">Working with Remote Repositories</a></li>
+                <li class="nav-item"><a class="nav-link" href="#advanced-commands">Advanced Git Commands</a></li>
+                <li class="nav-item"><a class="nav-link" href="#git-configuration">Git Configuration</a></li>
+                <li class="nav-item"><a class="nav-link" href="#troubleshooting">Troubleshooting Git</a></li>
+                <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <section id="getting-started">
+                <h2>Getting Started with Git</h2>
+                <p>Before diving into Git commands, make sure you have Git installed on your system. You can check this by running:</p>
+                <pre><code class="language-shell">git --version</code></pre>
+                <p>If Git is not installed, you can download and install it from <a href="https://git-scm.com/" target="_blank">Git's official website</a>.</p>
+            </section>
+
+            <section id="basic-commands">
+                <h2>Basic Git Commands</h2>
+                
+                <h3>Initialize a New Repository</h3>
+                <pre><code class="language-shell">git init</code></pre>
+
+                <h3>Clone an Existing Repository</h3>
+                <pre><code class="language-shell">git clone &lt;repository-url&gt;</code></pre>
+
+                <h3>Check Repository Status</h3>
+                <pre><code class="language-shell">git status</code></pre>
+
+                <h3>View Commit History</h3>
+                <pre><code class="language-shell">git log</code></pre>
+                <p>Add <code class="language-shell">--oneline</code> for a more compact view:</p>
+                <pre><code class="language-shell">git log --oneline</code></pre>
+            </section>
+
+            <section id="branching-merging">
+                <h2>Branching and Merging</h2>
+                
+                <h3>Create a New Branch</h3>
+                <pre><code class="language-shell">git branch &lt;branch-name&gt;</code></pre>
+
+                <h3>Switch to a Branch</h3>
+                <pre><code class="language-shell">git checkout &lt;branch-name&gt;</code></pre>
+                <p>Or, create and switch to a new branch in one command:</p>
+                <pre><code class="language-shell">git checkout -b &lt;branch-name&gt;</code></pre>
+
+                <h3>Merge Branches</h3>
+                <pre><code class="language-shell">git merge &lt;branch-name&gt;</code></pre>
+
+                <h3>Delete a Branch</h3>
+                <pre><code class="language-shell">git branch -d &lt;branch-name&gt;</code></pre>
+                <p>To force delete a branch:</p>
+                <pre><code class="language-shell">git branch -D &lt;branch-name&gt;</code></pre>
+            </section>
+
+            <section id="staging-committing">
+                <h2>Staging and Committing</h2>
+
+                <h3>Stage Changes</h3>
+                <pre><code class="language-shell">git add &lt;file-name&gt;</code></pre>
+                <p>To stage all changes:</p>
+                <pre><code class="language-shell">git add .</code></pre>
+
+                <h3>Commit Changes</h3>
+                <pre><code class="language-shell">git commit -m "Commit message"</code></pre>
+
+                <h3>Amend the Last Commit</h3>
+                <pre><code class="language-shell">git commit --amend</code></pre>
+            </section>
+
+            <section id="remote-repositories">
+                <h2>Working with Remote Repositories</h2>
+                
+                <h3>Add a Remote Repository</h3>
+                <pre><code class="language-shell">git remote add &lt;remote-name&gt; &lt;repository-url&gt;</code></pre>
+
+                <h3>View Remote Repositories</h3>
+                <pre><code class="language-shell">git remote -v</code></pre>
+
+                <h3>Fetch Changes from a Remote</h3>
+                <pre><code class="language-shell">git fetch &lt;remote-name&gt;</code></pre>
+
+                <h3>Pull Changes from a Remote</h3>
+                <pre><code class="language-shell">git pull &lt;remote-name&gt; &lt;branch-name&gt;</code></pre>
+
+                <h3>Push Changes to a Remote</h3>
+                <pre><code class="language-shell">git push &lt;remote-name&gt; &lt;branch-name&gt;</code></pre>
+            </section>
+
+            <section id="advanced-commands">
+                <h2>Advanced Git Commands</h2>
+                
+                <h3>Rebase Branches</h3>
+                <pre><code class="language-shell">git rebase &lt;branch-name&gt;</code></pre>
+
+                <h3>Cherry-Pick Commits</h3>
+                <pre><code class="language-shell">git cherry-pick &lt;commit-hash&gt;</code></pre>
+
+                <h3>Stash Changes</h3>
+                <pre><code class="language-shell">git stash</code></pre>
+                <p>To apply stashed changes:</p>
+                <pre><code class="language-shell">git stash apply</code></pre>
+
+                <h3>Reset Changes</h3>
+                <pre><code class="language-shell">git reset --hard</code></pre>
+                <p>To reset a specific file:</p>
+                <pre><code class="language-shell">git reset &lt;file-name&gt;</code></pre>
+            </section>
+
+            <section id="git-configuration">
+                <h2>Git Configuration</h2>
+                
+                <h3>Set Up Your Name and Email</h3>
+                <pre><code class="language-shell">git config --global user.name "Your Name"</code></pre>
+                <pre><code class="language-shell">git config --global user.email "your.email@example.com"</code></pre>
+
+                <h3>View Configuration Settings</h3>
+                <pre><code class="language-shell">git config --list</code></pre>
+            </section>
+
+            <section id="troubleshooting">
+                <h2>Troubleshooting Git</h2>
+                
+                <h3>View Differences</h3>
+                <pre><code class="language-shell">git diff</code></pre>
+
+                <h3>Resolve Merge Conflicts</h3>
+                <p>During a merge, if conflicts arise, Git will mark the conflicting files. Edit these files to resolve conflicts and then:</p>
+                <pre><code class="language-shell">git add &lt;resolved-file&gt;</code></pre>
+                <pre><code class="language-shell">git commit</code></pre>
+
+                <h3>Revert a Commit</h3>
+                <pre><code class="language-shell">git revert &lt;commit-hash&gt;</code></pre>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+                <p>Git is an essential tool for modern software development. Mastering these commands will help you manage your code effectively and collaborate efficiently with others. Keep this guide handy as you work with Git, and don’t hesitate to explore additional commands and options to further enhance your version control skills.</p>
+            </section>
+        </article>
+    </div>
+
+   
+    <script src="scripts.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    
+
+    <footer>
+     <div class="container">
+         <p>&copy; 2024 Habelash. All rights reserved.</p>
+     </div>
+   </footer>
+
+
+</body>
+</html>
