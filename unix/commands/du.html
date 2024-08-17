@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>du Command - Unix Commands</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Unix Commands</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Back to Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-5">
+        <section>
+            <div class="card">
+                <h5 class="card-header">du Command</h5>
+                <div class="card-body">
+                    <p class="card-text">The <code>du</code> command in Unix/Linux displays disk usage statistics for files and directories.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Syntax</h5>
+                <div class="card-body">
+                    <pre><code>du [options] [file(s) or directory]</code></pre>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Description</h5>
+                <div class="card-body">
+                    <p>The <code>du</code> command calculates and displays the disk usage of files and directories. It recursively summarizes disk usage of each directory and its subdirectories.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Options</h5>
+                <div class="card-body">
+                    <ul>
+                        <li><code>-h</code>: Print sizes in a human-readable format (e.g., 1K, 234M, 2G).</li>
+                        <li><code>-s</code>: Display only a total for each argument.</li>
+                        <li><code>-c</code>: Display a grand total.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Examples</h5>
+                <div class="card-body">
+                    <pre><code>du -h /var/log</code></pre>
+                    <p>This command displays the disk usage of the <code>/var/log</code> directory in a human-readable format.</p>
+                    <pre><code>du -s /home/user/docs</code></pre>
+                    <p>This command displays the total disk usage of the <code>/home/user/docs</code> directory.</p>
+                    <pre><code>du -h -c /home/user/docs /var/www</code></pre>
+                    <p>This command displays the disk usage of both <code>/home/user/docs</code> and <code>/var/www</code> directories with a grand total at the end.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Habelash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

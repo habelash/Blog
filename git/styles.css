@@ -1,0 +1,209 @@
+body {
+ background-color: #f8f9fa;
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+}
+
+header {
+ margin-bottom: 30px;
+}
+
+h1 {
+ font-size: 2rem;
+ color: #343a40;
+}
+
+nav ul.nav-pills {
+ margin-bottom: 20px;
+ flex-wrap: wrap;
+}
+
+nav ul.nav-pills .nav-link {
+ border-radius: 0;
+ font-size: 0.875rem;
+}
+
+nav ul.nav-pills .nav-link.active {
+ background-color: #007bff;
+ color: white;
+}
+
+section {
+ margin-bottom: 40px;
+}
+
+section h2 {
+ font-size: 1.75rem;
+ color: #007bff;
+ margin-bottom: 20px;
+}
+
+pre {
+ background-color: #2d2d2d;
+ color: #f8f8f2;
+ padding: 15px;
+ border-radius: 5px;
+ overflow-x: auto;
+ position: relative;
+ margin: 0;
+}
+
+pre code {
+ display: block;
+ white-space: pre-wrap; /* Allow wrapping of long lines */
+ font-size: 0.875rem; /* Adjust font size for better readability on mobile */
+}
+
+.copy-btn {
+ position: absolute;
+ right: 15px;
+ top: 15px;
+ background-color: #007bff;
+ color: white;
+ padding: 5px 10px;
+ border: none;
+ border-radius: 3px;
+ font-size: 0.75rem;
+ cursor: pointer;
+}
+
+.copy-btn:hover {
+ background-color: #0056b3;
+}
+
+p a {
+ color: #007bff;
+ text-decoration: none;
+}
+
+p a:hover {
+ text-decoration: underline;
+}
+
+/* PrismJS Syntax Highlighting */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+ color: #6a9955;
+}
+
+.token.punctuation {
+ color: #999;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+ color: #cc99cc;
+}
+
+.token.boolean,
+.token.number {
+ color: #f78c6c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+ color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.language-sass .token.string,
+.token.variable {
+ color: #f8c555;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+ color: #66d9ef;
+}
+
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit {
+ color: #f92672;
+}
+
+.token.regex,
+.token.important,
+.token.italic {
+ color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+ font-weight: bold;
+}
+
+.token.italic {
+ font-style: italic;
+}
+
+footer {
+ background-color: #333;
+ color: #fff;
+ text-align: center;
+ padding: 15px 0;
+ position: relative;
+ width: 100%;
+ bottom: 0;
+}
+ 
+
+@media (max-width: 576px) {
+ h1 {
+     font-size: 1.5rem;
+ }
+
+ nav ul.nav-pills {
+     flex-direction: column;
+ }
+
+ section h2 {
+     font-size: 1.5rem;
+ }
+
+ pre {
+     padding: 10px;
+ }
+
+ .copy-btn {
+     top: 10px;
+     right: 10px;
+     font-size: 0.7rem;
+     padding: 4px 8px;
+ }
+}
+
+@media (max-width: 768px) {
+ h1 {
+     font-size: 2rem;
+ }
+
+ section h2 {
+     font-size: 1.75rem;
+ }
+
+ pre {
+     padding: 15px;
+ }
+
+ .copy-btn {
+     font-size: 0.75rem;
+ }
+}
+

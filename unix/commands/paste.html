@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paste Command - Unix Commands</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Unix Commands</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Back to Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-5">
+        <section>
+            <div class="card">
+                <h5 class="card-header">paste Command</h5>
+                <div class="card-body">
+                    <p class="card-text">The <code>paste</code> command in Unix/Linux merges lines of files. It concatenates corresponding lines of the given input files, separated by a specified delimiter, and outputs them to standard output.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Syntax</h5>
+                <div class="card-body">
+                    <pre><code>paste [options] file1 file2...</code></pre>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Description</h5>
+                <div class="card-body">
+                    <p>The <code>paste</code> command concatenates corresponding lines from multiple files or standard input and outputs them, separated by tabs by default or as specified by options.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Options</h5>
+                <div class="card-body">
+                    <ul>
+                        <li><code>-d</code> <em>delimiter</em>: Use <em>delimiter</em> to separate merged lines instead of tabs.</li>
+                        <li><code>-s</code>: Concatenate all lines of each file in parallel, rather than in sequence.</li>
+                        <li><code>-z</code>: Combine lines from different files sequentially into a single line, separated by null bytes.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h5 class="card-header">Examples</h5>
+                <div class="card-body">
+                    <pre><code>paste file1.txt file2.txt</code></pre>
+                    <p>This command merges corresponding lines from <code>file1.txt</code> and <code>file2.txt</code> separated by tabs.</p>
+                    <pre><code>paste -d "," file1.txt file2.txt</code></pre>
+                    <p>This command merges lines from <code>file1.txt</code> and <code>file2.txt</code>, separated by commas instead of tabs.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Habelash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
