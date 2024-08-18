@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../images/blog_logo.png" type="image/png"> 
+</head>
+<body>
+     <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+          <h1 class="animate__animated animate__fadeIn">SQL Blog</h1>
+          <p class="lead animate__animated animate__fadeIn animate__delay-1s">Master SQL with Detailed Examples and Tutorials</p>
+      </div>
+    </header>
+
+    <div class="container my-5">
+        <!-- Introduction to SQL -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">Introduction to SQL</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Overview</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">What is SQL?</h4>
+                    <p>SQL (Structured Query Language) is a standard language for managing and manipulating databases. It is used to perform tasks such as querying data, updating records, and managing database structures.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Basic SQL Queries -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">Basic SQL Queries</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Fundamentals</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">SELECT Statement</h4>
+                    <pre><code class="language-sql">-- Retrieve all columns from the 'employees' table
+SELECT * FROM employees;
+
+-- Retrieve specific columns from the 'employees' table
+SELECT first_name, last_name, salary FROM employees;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced SQL Queries -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">Advanced SQL Queries</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Complex Queries</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">JOIN Operations</h4>
+                    <pre><code class="language-sql">-- Retrieve orders and their corresponding customer information
+SELECT orders.order_id, customers.customer_name
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.customer_id;</code></pre>
+                    <h4 class="card-title">Subqueries</h4>
+                    <pre><code class="language-sql">-- Retrieve employees who earn more than the average salary
+SELECT * FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SQL Functions -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">SQL Functions</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Common Functions</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">Aggregate Functions</h4>
+                    <pre><code class="language-sql">-- Count the number of employees in the company
+SELECT COUNT(*) AS number_of_employees FROM employees;</code></pre>
+                    <h4 class="card-title">String Functions</h4>
+                    <pre><code class="language-sql">-- Combine first and last names into a full name
+SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM employees;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Database Design and Normalization -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">Database Design and Normalization</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Key Concepts</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">Database Schema Design</h4>
+                    <p>Effective database schema design involves organizing your data in a way that reduces redundancy and improves data integrity. Key concepts include normalization and relationships between tables.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SQL Performance and Optimization -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">SQL Performance and Optimization</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Improving Performance</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">Indexing</h4>
+                    <pre><code class="language-sql">-- Create an index on the 'salary' column for faster queries
+CREATE INDEX idx_salary ON employees(salary);</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security and Permissions -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">Security and Permissions</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Best Practices</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">SQL Injection</h4>
+                    <p>SQL injection is a critical security vulnerability where an attacker can execute arbitrary SQL code. Protect your applications by using parameterized queries and prepared statements.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SQL in Practice -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">SQL in Practice</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Real-world Applications</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">Real-world SQL Examples</h4>
+                    <p>SQL is used in various real-world applications such as e-commerce platforms, financial systems, and more. Here are some examples of how SQL queries are used in practice.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools and Resources -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">Tools and Resources</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Helpful Resources</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">Popular SQL Databases</h4>
+                    <p>Some of the most popular SQL databases include MySQL, PostgreSQL, and SQL Server. Each has its unique features and use cases.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Troubleshooting and FAQs -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">Troubleshooting and FAQs</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Common Issues</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">Common SQL Errors</h4>
+                    <p>Learn how to diagnose and fix common SQL errors such as syntax errors, data type mismatches, and more.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SQL Data Types -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">SQL Data Types</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Understanding Data Types</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">Numeric Data Types</h4>
+                    <pre><code class="language-sql">-- Numeric types include INT, DECIMAL, FLOAT, etc.
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    price DECIMAL(10, 2) NOT NULL
+);</code></pre>
+                    <h4 class="card-title">String Data Types</h4>
+                    <pre><code class="language-sql">-- String types include CHAR, VARCHAR, TEXT, etc.
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL
+);</code></pre>
+                    <h4 class="card-title">Date and Time Data Types</h4>
+                    <pre><code class="language-sql">-- Date and time types include DATE, DATETIME, TIMESTAMP, etc.
+CREATE TABLE events (
+    event_id INT PRIMARY KEY,
+    event_date DATETIME NOT NULL
+);</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SQL Transactions -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">SQL Transactions</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Managing Transactions</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">BEGIN, COMMIT, and ROLLBACK</h4>
+                    <pre><code class="language-sql">-- Begin a transaction
+BEGIN;
+
+-- Perform SQL operations
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
+
+-- Commit the transaction
+COMMIT;
+
+-- If there is an error, rollback the transaction
+ROLLBACK;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SQL Views and Stored Procedures -->
+        <div class="section mb-5">
+            <h2 class="text-primary animate__animated animate__fadeIn">SQL Views and Stored Procedures</h2>
+            <h3 class="text-secondary animate__animated animate__fadeIn animate__delay-1s">Advanced SQL Features</h3>
+            <div class="card mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                <div class="card-body">
+                    <h4 class="card-title">Views</h4>
+                    <pre><code class="language-sql">-- Create a view to simplify complex queries
+CREATE VIEW employee_view AS
+SELECT first_name, last_name, salary
+FROM employees
+WHERE department = 'Sales';</code></pre>
+                    <h4 class="card-title">Stored Procedures</h4>
+                    <pre><code class="language-sql">-- Create a stored procedure for repetitive tasks
+CREATE PROCEDURE GetEmployeeById(IN emp_id INT)
+BEGIN
+    SELECT * FROM employees WHERE employee_id = emp_id;
+END;</code></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Habelash. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
