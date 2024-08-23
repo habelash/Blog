@@ -1,7 +1,13 @@
 /* Existing styles */
 
 .hero {
- background: #333;
+ background: linear-gradient(
+    135deg,
+    #001447,
+    #e00051
+  );
+
+
  color: #fff;
  height: 100vh;
  display: flex;
