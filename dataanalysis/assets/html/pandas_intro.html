@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Pandas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="../../index.html">Pandas Library Overview</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#introduction">Introduction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#key-features">Key Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#common-use-cases">Common Use Cases</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#example-code">Example Code</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="container">
+        <h1>Introduction to Pandas</h1>
+        <p class="lead">Explore the powerful data manipulation and analysis capabilities of Pandas in Python, a library essential for data science and machine learning.</p>
+    </div>
+</header>
+
+<div class="container mt-5">
+    <section id="introduction">
+        <h2 class="section-title">1. Introduction</h2>
+        <p>Pandas is a powerful and versatile open-source library in Python designed for data manipulation and analysis. It provides data structures and functions needed to work with structured data seamlessly. The library is widely used in data science, machine learning, and statistical analysis due to its intuitive and efficient handling of data.</p>
+    </section>
+
+    <section id="key-features" class="mt-5">
+        <h2 class="section-title">2. Key Features of Pandas</h2>
+        <h3>Data Structures</h3>
+        <ul>
+            <li><strong>Series:</strong> A one-dimensional array-like structure that can hold any data type (integers, strings, floats, etc.). It is similar to a column in a spreadsheet or a database table.</li>
+            <li><strong>DataFrame:</strong> A two-dimensional, size-mutable, and potentially heterogeneous tabular data structure with labeled axes (rows and columns). It can be thought of as a table or a spreadsheet.</li>
+        </ul>
+        <h3>Data Manipulation</h3>
+        <ul>
+            <li><strong>Indexing and Selection:</strong> Advanced indexing and selection capabilities for accessing data in Series and DataFrames. This includes label-based indexing, integer-based indexing, and boolean indexing.</li>
+            <li><strong>Data Alignment:</strong> Automatic alignment of data, making it easier to perform operations between Series and DataFrames that have mismatched indices.</li>
+            <li><strong>Missing Data Handling:</strong> Functions for detecting, removing, or imputing missing values in datasets. Methods include <code>dropna()</code>, <code>fillna()</code>, and <code>isna()</code>.</li>
+        </ul>
+        <h3>Data Cleaning and Transformation</h3>
+        <ul>
+            <li><strong>Data Wrangling:</strong> Techniques for cleaning and transforming data, such as merging, reshaping, and pivoting data. Functions include <code>merge()</code>, <code>concat()</code>, <code>pivot()</code>, and <code>melt()</code>.</li>
+            <li><strong>Data Aggregation:</strong> Grouping data and applying aggregation functions to summarize or transform data. Methods like <code>groupby()</code>, <code>agg()</code>, and <code>transform()</code> are used for this purpose.</li>
+        </ul>
+        <h3>Data Import and Export</h3>
+        <ul>
+            <li><strong>File Handling:</strong> Support for reading from and writing to various file formats, including CSV, Excel, SQL databases, and HDF5. Functions include <code>read_csv()</code>, <code>to_excel()</code>, and <code>read_sql()</code>.</li>
+        </ul>
+        <h3>Time Series Analysis</h3>
+        <ul>
+            <li><strong>Date and Time Handling:</strong> Capabilities for working with date and time data, including resampling, frequency conversion, and time-based indexing. Functions include <code>resample()</code>, <code>date_range()</code>, and <code>to_datetime()</code>.</li>
+        </ul>
+        <h3>Performance</h3>
+        <ul>
+            <li><strong>Efficient Computations:</strong> Optimized performance for large datasets through vectorized operations and efficient data handling.</li>
+        </ul>
+        <h3>Integration with Other Libraries</h3>
+        <ul>
+            <li><strong>Compatibility:</strong> Seamlessly integrates with other scientific libraries in Python such as NumPy, SciPy, and scikit-learn, enabling advanced data analysis and machine learning workflows.</li>
+        </ul>
+    </section>
+
+    <section id="common-use-cases" class="mt-5">
+        <h2 class="section-title">3. Common Use Cases</h2>
+        <ul>
+            <li><strong>Exploratory Data Analysis (EDA):</strong> Pandas is often used to perform EDA by summarizing and visualizing data, calculating descriptive statistics, and exploring data distributions.</li>
+            <li><strong>Data Cleaning:</strong> Handling and preprocessing raw data to prepare it for analysis or machine learning models.</li>
+            <li><strong>Data Transformation:</strong> Reshaping and manipulating data to fit specific formats or requirements, such as pivoting tables or merging datasets.</li>
+            <li><strong>Time Series Analysis:</strong> Analyzing and forecasting time-based data, such as stock prices or sensor readings.</li>
+        </ul>
+    </section>
+
+    <section id="example-code" class="mt-5">
+        <h2 class="section-title">4. Example Code</h2>
+        <div class="code-block">
+            <pre><code>import pandas as pd
+
+# Create a DataFrame
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['New York', 'Los Angeles', 'Chicago']
+}
+df = pd.DataFrame(data)
+
+# Display the DataFrame
+print(df)
+
+# Select a column
+ages = df['Age']
+print(ages)
+
+# Filter rows
+filtered_df = df[df['Age'] > 28]
+print(filtered_df)
+
+# Compute basic statistics
+mean_age = df['Age'].mean()
+print(f"Mean Age: {mean_age}")</code></pre>
+        </div>
+    </section>
+</div>
+
+<footer class="bg-light text-center py-3 mt-5">
+    <p>&copy; 2024 Pandas Library Overview. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to SQL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="../../index.html">SQL Overview</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#introduction">Introduction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#key-concepts">Key Concepts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#common-queries">Common Queries</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#example-code">Example Code</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="container">
+        <h1>Introduction to SQL</h1>
+        <p class="lead">Discover the fundamentals of SQL, a powerful language for managing and querying relational databases.</p>
+    </div>
+</header>
+
+<div class="container mt-5">
+    <section id="introduction">
+        <h2 class="section-title">1. Introduction</h2>
+        <p>SQL (Structured Query Language) is the standard language used to communicate with relational databases. It is essential for querying, updating, and managing data within a relational database system. SQL allows users to perform various operations such as data retrieval, insertion, updating, and deletion with a simple and intuitive syntax.</p>
+    </section>
+
+    <section id="key-concepts" class="mt-5">
+        <h2 class="section-title">2. Key Concepts</h2>
+        <h3>Data Definition Language (DDL)</h3>
+        <ul>
+            <li><strong>CREATE TABLE:</strong> Defines a new table along with its columns and data types.</li>
+            <li><strong>ALTER TABLE:</strong> Modifies an existing table's structure, such as adding or removing columns.</li>
+            <li><strong>DROP TABLE:</strong> Deletes an existing table and its data.</li>
+        </ul>
+        <h3>Data Manipulation Language (DML)</h3>
+        <ul>
+            <li><strong>SELECT:</strong> Retrieves data from one or more tables based on specified criteria.</li>
+            <li><strong>INSERT INTO:</strong> Adds new rows to a table.</li>
+            <li><strong>UPDATE:</strong> Modifies existing data within a table.</li>
+            <li><strong>DELETE:</strong> Removes rows from a table based on specified conditions.</li>
+        </ul>
+        <h3>Data Querying</h3>
+        <ul>
+            <li><strong>WHERE:</strong> Filters records based on specified conditions.</li>
+            <li><strong>JOIN:</strong> Combines rows from two or more tables based on a related column.</li>
+            <li><strong>GROUP BY:</strong> Groups rows sharing a property and performs aggregate functions.</li>
+            <li><strong>ORDER BY:</strong> Sorts the result set based on one or more columns.</li>
+        </ul>
+    </section>
+
+    <section id="common-queries" class="mt-5">
+        <h2 class="section-title">3. Common Queries</h2>
+        <ul>
+            <li><strong>Basic Select Query:</strong> <code>SELECT * FROM table_name;</code></li>
+            <li><strong>Filtered Query:</strong> <code>SELECT * FROM table_name WHERE condition;</code></li>
+            <li><strong>Join Query:</strong> <code>SELECT columns FROM table1 JOIN table2 ON table1.id = table2.id;</code></li>
+            <li><strong>Grouped Query:</strong> <code>SELECT column, COUNT(*) FROM table_name GROUP BY column;</code></li>
+        </ul>
+    </section>
+
+    <section id="example-code" class="mt-5">
+        <h2 class="section-title">4. Example Code</h2>
+        <div class="code-block">
+            <pre><code>-- Create a table
+CREATE TABLE Employees (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT,
+    Department VARCHAR(50)
+);
+
+-- Insert data into the table
+INSERT INTO Employees (ID, Name, Age, Department)
+VALUES (1, 'Alice', 30, 'HR'),
+       (2, 'Bob', 25, 'IT'),
+       (3, 'Charlie', 35, 'Finance');
+
+-- Select all data from the table
+SELECT * FROM Employees;
+
+-- Update a record
+UPDATE Employees
+SET Age = 31
+WHERE Name = 'Alice';
+
+-- Delete a record
+DELETE FROM Employees
+WHERE ID = 2;</code></pre>
+        </div>
+    </section>
+</div>
+
+<footer class="bg-light text-center py-3 mt-5">
+    <p>&copy; 2024 SQL Overview. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
